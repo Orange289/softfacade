@@ -21,7 +21,6 @@ var gulp = require('gulp'),
 	zip = require('gulp-zip'),
 	reload = browserSync.reload;
 
-
 var paths = {
 	build: {
 		html: 'build/',
@@ -153,5 +152,6 @@ gulp.task('zip', function () {
 		.pipe(zip('archive.zip'))
 		.pipe(gulp.dest(paths.archive))
 })
+
 
 gulp.task('default', ['clean', 'build', 'webserver', 'watch']);
