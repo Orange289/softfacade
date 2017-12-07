@@ -3,7 +3,7 @@
 var SETTINGS = {
 	activeClass: 'is-active',
 	hiddenClass: 'is-hidden',
-	selhovClass: 'is-selected-hover'
+	selhovClass: 'is-selected-hover
 };
 
 $(function() {
