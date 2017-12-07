@@ -1,0 +1,8 @@
+{
+  "extends": [
+    "stylelint-config-lotus"
+  ],
+  "plugins": [
+    "stylelint-scss"
+  ]
+}

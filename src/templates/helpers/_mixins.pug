@@ -1,0 +1,56 @@
+mixin head(array,arrayFav)
+	meta(charset='UTF-8')
+	title!=array.title
+	meta(name='viewport', content='width=device-width, initial-scale=1.0')
+	meta(name='apple-mobile-web-app-capable', content='yes')
+	link(rel='shortcut icon', href=arrayFav.src_ico, type='image/x-icon')
+	link(rel='stylesheet' media='all' href='css/style.css')
+
+
+mixin scripts
+	script(src='js/jquery-3.2.1.min.js')
+	script(src='js/main.js')
+
+
+mixin items(array)
+	each item in array
+		div(class=item.class_name)
+			.card
+				.card__bg
+					.card__wrapper
+						.card__title
+							.card__label.card__label--default #{item.label}
+							.card__label.card__label--sel-hov #{item.label_selhov}
+							.card__name
+								h2 #{item.name}
+									span #{item.subname}
+						.card__description 
+							b.card__amount.card__amount--portions #{item.amount}
+							| #{item.amount_measure}
+							br
+							b.card__amount.card__amount--mouses #{item.mouses}
+							| #{item.mouses_measure}
+							br
+							| #{item.note}
+					.card__weight
+						b.card__count #{item.count}
+						|  кг
+			.items__remark.items__remark--default #{item.text}
+				a.items__link(href="#") #{item.link}
+			.items__remark.items__remark--sel.is-hidden #{item.text_sel}
+			.items__remark.items__remark--dis #{item.text_dis}
+
+mixin loop_while(counter)
+	- i=0;
+	while i < counter
+		-i++;
+		block
+
+mixin loop_while_sub(counter)
+	- j = 0;
+		while j < counter
+			-j++;
+			block
+
+
+

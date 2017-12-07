@@ -1,0 +1,23 @@
+.page-body {
+    background-image: url('../img/bg-main.jpg');
+
+    &::before,
+    &::after {
+        position: fixed;
+        content: '';
+        @include size(100%, 50%);  
+        z-index: -1;      
+    }
+
+    &::before {
+        top: 0;
+        left: 0;
+        background-image: linear-gradient(180deg, rgba(0,0,0,0.5), rgba(0,0,0,0));
+    }
+
+    &::after {
+        bottom: 0;
+        left: 0;
+        background-image: linear-gradient(360deg, rgba(0,0,0,0.5), rgba(0,0,0,0));
+    }
+}
