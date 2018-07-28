@@ -1,29 +1,30 @@
 // fonts
 
-@font-face {
-	@include font-setup($font-fam-1, $font-1-local, $font-1-url1, $font-1-url2);
-  font-weight: 100;
-}
+@include font-setup($font-fam, $font-local, $font-regular-url1, $font-regular-url2, $font-regular-weight);
+
+@include font-setup($font-fam, $font-local, $font-thin-url1, $font-thin-url2, $font-thin-weight);
+
+@include font-setup($font-fam, $font-local, $font-medium-url1, $font-medium-url2, $font-medium-weight);
+
+@include font-setup($font-fam, $font-local, $font-semibold-url1, $font-semibold-url2, $font-semibold-weight);
+
+@include font-setup($font-fam, $font-local, $font-bold-url1, $font-bold-url2, $font-bold-weight);
+
 
 // global styles
 
 html {
-  font-family: sans-serif;  
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%; 
+	font-family: sans-serif;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
 }
 
 body {
-  font-family: sans-serif;
-  font-size: $font-size-base;
-  margin: 0;
-  background-color: #000;  
-}
-
-main {
-  display: flex;
-  flex-wrap: wrap;
-  @include size(100%);
+	font-family: $font-fam, Arial, sans-serif;
+	font-size: $font-size-base;
+	background-color: #fff;
+	color: $text-color;
+	margin: 0;
 }
 
 article,
@@ -38,191 +39,237 @@ menu,
 nav,
 section,
 summary {
-  display: block; }
+	display: block;
+}
 
 audio,
 canvas,
 progress,
 video {
-  display: inline-block;
-  vertical-align: baseline; }
+	display: inline-block;
+	vertical-align: baseline;
+}
 
 audio:not([controls]) {
-  display: none;
-  height: 0; }
+	display: none;
+	height: 0;
+}
 
 [hidden],
 template {
-  display: none; }
+	display: none;
+}
 
 a {
-  background-color: transparent; }
+	color: $text-color;
+	background-color: transparent;
+	text-decoration: none; }
 
 a:active,
 a:hover {
-  outline: 0; }
+	outline: 0;
+}
 
 abbr[title] {
-  border-bottom: 1px dotted; }
+	border-bottom: 1px dotted;
+}
 
 b,
 strong {
-  font-weight: bold; }
+	font-weight: bold;
+}
 
 mark {
-  background: #ff0;
-  color: #000; }
+	background: #ff0;
+	color: #000;
+}
 
 small {
-  font-size: 80%; }
+	font-size: 80%;
+}
 
 sub,
 sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline; }
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
 
 sup {
-  top: -0.5em; }
+	top: -0.5em;
+}
 
 sub {
-  bottom: -0.25em; }
+	bottom: -0.25em;
+}
 
 img {
-  border: 0; }
+	border: 0;
+}
 
 svg:not(:root) {
-  overflow: hidden; }
+	overflow: hidden;
+}
 
 figure {
-  margin: 1em 40px; }
+	margin: 1em 40px;
+}
 
 hr {
-  box-sizing: content-box;
-  height: 0; }
+	box-sizing: content-box;
+	height: 0;
+}
 
 pre {
-  overflow: auto; }
+	overflow: auto;
+}
 
 code,
 kbd,
 pre,
 samp {
-  font-family: monospace, monospace;
-  font-size: 1em; }
+	font-family: monospace, monospace;
+	font-size: 1em;
+}
 
 button,
 input,
 optgroup,
 select,
 textarea {
-  color: inherit;
-  font: inherit;
-  margin: 0; }
+	color: inherit;
+	font: inherit;
+	margin: 0;
+}
 
 button {
-  overflow: visible; }
+	overflow: visible;
+}
 
 button,
 select {
-  text-transform: none; }
+	text-transform: none;
+}
 
 button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  -webkit-appearance: button;
-  cursor: pointer; }
+	-webkit-appearance: button;
+	cursor: pointer;
+}
 
 button[disabled],
 html input[disabled] {
-  cursor: default; }
+	cursor: default;
+}
 
 button::-moz-focus-inner,
 input::-moz-focus-inner {
-  border: 0;
-  padding: 0; }
+	border: 0;
+	padding: 0;
+}
 
 input {
-  line-height: normal; }
+	line-height: normal;
+}
 
 input[type="checkbox"],
 input[type="radio"] {
-  box-sizing: border-box;
-  padding: 0; }
+	box-sizing: border-box;
+	padding: 0;
+}
 
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
-  height: auto; }
+	height: auto;
+}
 
 input[type="search"] {
-  -webkit-appearance: textfield;
-  box-sizing: content-box; }
+	-webkit-appearance: textfield;
+	box-sizing: content-box;
+}
 
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none; }
+	-webkit-appearance: none;
+}
 
 fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em; }
+	border: 1px solid #c0c0c0;
+	margin: 0 2px;
+	padding: 0.35em 0.625em 0.75em;
+}
 
 legend {
-  border: 0;
-  padding: 0; }
+	border: 0;
+	padding: 0;
+}
 
 textarea {
-  overflow: auto; }
+	overflow: auto;
+}
 
 optgroup {
-  font-weight: bold; }
+	font-weight: bold;
+}
 
 table {
-  border-collapse: collapse;
-  border-spacing: 0; }
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 
 td,
 th {
-  padding: 0; }
+	padding: 0;
+}
 
 *, *:before, *:after {
-  box-sizing: border-box; }
+	box-sizing: border-box;
+}
 
 html, body {
-  height: 100%; }
+	height: 100%;
+}
 
 input,
 button,
 select,
 textarea {
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit; }
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
 
-a {
-  color: $link-color;
-  text-decoration: none; }
-  a:hover, a:focus {
-    color: $hover-card-color;
-    text-decoration: none; }
+p {
+	font-family: $font-fam, Arial, sans-serif;
+	line-height: 1.5;
+	font-size: $font-size-base - 3;
+
+	@media (min-width: $screen-md-min) {
+		font-size: $font-size-base;
+	}
+}
 
 figure {
-  margin: 0; }
+	margin: 0;
+}
 
 img {
-  max-width: 100%;
-  height: auto;
-  vertical-align: middle; }
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+}
 
 hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #eceeef;
-  margin: 1em 0;
-  padding: 0; }
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #eceeef;
+	margin: 1em 0;
+	padding: 0;
+}
 
 audio,
 canvas,
@@ -230,41 +277,38 @@ iframe,
 img,
 svg,
 video {
-  vertical-align: middle; }
+	vertical-align: middle;
+}
 
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: inherit;
-  font-weight: 400;
-  line-height: 1.2;
-  color: inherit; }
-
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6,
-p,
-ul,
-ol {
-  margin: 0 0 24px; }
-
-h1, .h1 {
-  font-size: $h1-size }
+h1, h2, h3, h4, h5, h6 {
+	font-family: inherit;
+	font-weight: 400;
+	line-height: 1.2;
+	color: inherit;
+}
 
 small,
 .small {
-  font-size: 80%;
-  font-weight: normal;
-  line-height: 1; 
+	font-size: 80%;
+	font-weight: normal;
+	line-height: 1;
 }
 
 .clearfix:before, .clearfix:after {
-  display: table;
-  content: "";
+	display: table;
+	content: "";
 }
 
 .clearfix:after {
-  clear: both; }
+	clear: both;
+}
 
 .is-hidden {
-  display: none !important; }
+	display: none !important;
+}
+
+main {
+	display: none;
+}
 
 

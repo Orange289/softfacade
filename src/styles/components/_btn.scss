@@ -1,0 +1,23 @@
+.btn {
+	font-size: $font-size-small;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 600;
+	white-space: nowrap;
+	display: inline-block;
+	background-image: none;
+	border-radius: $btn-border-radius;
+	padding: 12px 20px;
+	transition: all 0.3s ease;
+}
+
+.btn--primary {
+	color: $btn-text-color;
+	background: $btn-bg-color;
+
+	&:hover,
+	&:focus,
+	&:active {
+		background: lighten($btn-bg-color, 5%);
+	}
+}

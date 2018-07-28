@@ -1,42 +1,77 @@
-'use strict';
-
-var SETTINGS = {
-	activeClass: 'is-active',
-	hiddenClass: 'is-hidden',
-	selhovClass: 'is-selected-hover'
+var MY_SETTINGS = {
+	css: {
+		activeClass: 'is-active',
+		hiddenClass: 'is-hidden',
+		openedClass: 'is-opened'
+	}
 };
 
-$(function() {
-	var $card = $('.card:not(".is-disabled .card")');
-	var $remarkDefault = '.items__remark--default';
-	var $remarkSelected = '.items__remark--sel';
-	var $remarkLink = $('.items__link');
-	var $cardActive = $('.card.is-active');
+$(function () {
+	var $header = $('header');
 
-	$remarkLink.click(function () {
-		$(this).parents('.items__block').find('.card').toggleClass(SETTINGS.activeClass);
-		$(this).parents('.items__block').find($remarkDefault).toggleClass(SETTINGS.hiddenClass);
-		$(this).parents('.items__block').find($remarkSelected).toggleClass(SETTINGS.hiddenClass);
-	})
+	$('main').css('display', 'block');
 
-	$card.click(function () {
-		$(this).toggleClass(SETTINGS.activeClass);
-		$(this).parent('.items__block').find($remarkDefault).toggleClass(SETTINGS.hiddenClass);
-		$(this).parent('.items__block').find($remarkSelected).toggleClass(SETTINGS.hiddenClass);
-		$(this).removeClass(SETTINGS.selhovClass);
-	})
+	// Menu toggle
 
-	$card.hover(
-		function () {
-			if ($(this).hasClass(SETTINGS.activeClass)) {			
-				$(this).addClass(SETTINGS.selhovClass);
+	$('[data-toggle-menu]').click(function () {
+		$(this).toggleClass(MY_SETTINGS.css.activeClass);
+		$('[data-menu]').slideToggle();
+		$header.toggleClass(MY_SETTINGS.css.openedClass);
+	});
+
+	// Slick slider options
+
+	$('.slick').slick({
+		dots: false,
+		infinite: true,
+		speed: 300,
+		slidesToShow: 7,
+		slidesToScroll: 7,
+		responsive: [
+			{
+				breakpoint: 1200,
+				settings: {
+					slidesToShow: 4,
+					slidesToScroll: 4
+				}
+			},
+			{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 2
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				}
 			}
-		},
-		function () {
-			if ($(this).hasClass(SETTINGS.activeClass)) {
-				$(this).removeClass(SETTINGS.selhovClass);
-			}
-		}
-	)
+		]
+	});
+
+	// Tabs
+
+	$('.tabs__link').click(function (e) {
+		e.preventDefault();
+		var $link = $(this);
+		var tabIndex = $link.index();
+		var $tab = $link
+			.parents('.tabs')
+			.find('.tab')
+			.eq(tabIndex);
+		$link
+			.addClass(MY_SETTINGS.css.activeClass)
+			.siblings()
+			.removeClass(MY_SETTINGS.css.activeClass);
+		$tab
+			.removeClass(MY_SETTINGS.css.hiddenClass)
+			.siblings('.tab')
+			.addClass(MY_SETTINGS.css.hiddenClass);
+	});
+
+
 
 })

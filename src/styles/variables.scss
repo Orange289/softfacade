@@ -1,40 +1,55 @@
 // colors
 
-$card-background: #f2f2f2;
-$default-card-color: #1698d9;
-$hover-card-color: #2ea8e6;
-$selected-card-color: #d91667;
-$selected-hover-card-color: #e62e7a;
-$selected-hover-label: #e52e7a;
-$disabled-card-color: #b3b3b3;
-$card-title-color: #000;
-$card-text-color: #666;
-$card-weight-text-color: #fff;
-$link-color: #1698d9;
-$remark-color: #fff;
-$disabled-text-color: #ffff66;
+$text-color: #303032;
+$title-color: #000000;
+$header-link-color: $text-color;
+$blue-color: #015aff;
+$dark-color: #181c28;
+$gray-color: #f7f7f9;
+$link-color: $blue-color;
+$btn-text-color: #fff;
+$btn-bg-color: $blue-color;
 
 // typographics
 
-$font-fam-1: 'Exo 2 Thin';
+$font-fam: 'Barlow';
+$font-local: 'Barlow';
 
-$font-1-local: 'Exo 2 Thin';
+$font-regular-url1: '../fonts/Barlow-Regular.woff2';
+$font-regular-url2: '../fonts/Barlow-Regular.woff';
+$font-regular-weight: 400;
 
-$font-1-url1: '../fonts/exo20-thin.woff';
-$font-1-url2: '../fonts/exo20-thin.woff2';
+$font-thin-url1: '../fonts/Barlow-Thin.woff2';
+$font-thin-url2: '../fonts/Barlow-Thin.woff';
+$font-thin-weight: 100;
 
-$font-size-base: 16px;
+$font-medium-url1: '../fonts/Barlow-Medium.woff2';
+$font-medium-url2: '../fonts/Barlow-Medium.woff';
+$font-medium-weight: 500;
 
-$h1-size: 36px;
-$h2-size: 30px;
+$font-semibold-url1: '../fonts/Barlow-Semibold.woff2';
+$font-semibold-url2: '../fonts/Barlow-Semibold.woff';
+$font-semibold-weight: 600;
 
+$font-bold-url1: '../fonts/Barlow-Bold.woff2';
+$font-bold-url2: '../fonts/Barlow-Bold.woff';
+$font-bold-weight: 700;
 
-// media 
+$font-size-base: 19px;
+$font-size-title: 48px;
+$font-size-subtitle: 24px;
+$font-size-small: 16px;
+$font-size-header: 12px;
+
+// media
 
 $screen-sm-min: 768px;
+$screen-md-min: 992px;
 $screen-lg-min: 1200px;
 
+// other
 
-$card-border-radius: 12px;
+$btn-border-radius: 2px;
+
 
 

@@ -2,13 +2,13 @@
 
 var gulp = require('gulp'),
 	watch = require('gulp-watch'),
-	pug = require('gulp-pug'),
 	prefixer = require('gulp-autoprefixer'),
 	plumber = require('gulp-plumber'),
+	fileinclude = require('gulp-file-include'),
 	del = require('del'),
 	sass = require('gulp-sass'),
 	sassGlob = require('gulp-sass-glob'),
-	cssimport = require("gulp-cssimport"),
+	cssimport = require('gulp-cssimport'),
 	rename = require('gulp-rename'),
 	rigger = require('gulp-rigger'),
 	cssmin = require('gulp-csso'),
@@ -29,21 +29,21 @@ var paths = {
 		img: 'build/img/',
 		fonts: 'build/fonts/'
 	},
-	src: { //Пути откуда брать исходники
+	src: {
 		js: 'src/scripts/*.js',
 		sass: 'src/styles/**/*.scss',
 		sassEntry: 'src/styles/base.scss',
-		pug: 'src/templates/',
-		img: 'src/assets/img/*.{png,jpg,gif,ico}',
+		html: 'src/templates/*.html',
+		img: 'src/assets/img/*.{png,svg,jpg,gif,ico}',
 		fonts: 'src/assets/fonts/**/*.{woff,woff2}'
 	},
 	watch: {
-		pug: 'src/templates/',
+		html: 'src/templates/',
 		js: 'src/scripts/**/*.js',
 		sass: 'src/styles/**/*.scss',
 		sassEntry: 'src/styles/base.scss',
-		pug: 'src/templates/',
-		img: 'src/assets/img/*.{png,jpg,gif,ico}',
+		html: 'src/templates/',
+		img: 'src/assets/img/*.{png,svg,jpg,gif,ico}',
 		fonts: 'src/assets/fonts/**/*.{woff,woff2}'
 	},
 	archive: './archive',
@@ -52,18 +52,22 @@ var paths = {
 
 var config = {
     server: {
-        baseDir: "./build"
+        baseDir: './build'
     },
     tunnel: true,
     host: 'localhost',
     port: 9000,
-    logPrefix: "Orange"
+    logPrefix: 'Orange'
 };
 
 gulp.task('html:build', function () {
-	gulp.src([paths.src.pug + '*.pug', '!' + paths.src.pug + '_*.pug'])
-		.pipe(plumber())
-		.pipe(pug({pretty: true}))
+	gulp.src(paths.src.html)
+		.pipe(
+			fileinclude({
+				prefix: '@@',
+				basepath: '@file'
+			})
+		)
 		.pipe(gulp.dest(paths.build.html))
 		.pipe(browserSync.stream());
 });
@@ -81,7 +85,7 @@ gulp.task('style:build', function () {
 				.pipe(plumber())
 				.pipe(sassGlob())
         .pipe(sass())
-				.pipe(cssimport({extensions: ["css"]}))
+				.pipe(cssimport({extensions: ['css']}))
 		.pipe(prefixer())
 				.pipe(cssmin())
 				.pipe(rename('style.css'))
@@ -119,7 +123,7 @@ gulp.task('build', [
 ]);
 
 gulp.task('watch', function(){
-    watch([paths.watch.pug], function(event, cb) {
+    watch([paths.watch.html], function(event, cb) {
         gulp.start('html:build');
     });
     watch([paths.watch.sass], function(event, cb) {

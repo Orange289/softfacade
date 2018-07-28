@@ -11,12 +11,15 @@
   height: $height;
 }
 
-@mixin font-setup($f, $l, $u1, $u2) {
-  font-family: $f;
-  src:
-    local($l),
-    url($u1) format('woff'),
-    url($u2) format('woff2');
+@mixin font-setup($f, $l, $u1, $u2, $w) {
+	@font-face {
+		font-family: $f;
+		src:
+			local($l),
+			url($u1) format('woff'),
+			url($u2) format('woff2');
+		font-weight: $w;
+	}
 }
 
 @mixin font-param($s, $l, $w, $c: #000000) {
