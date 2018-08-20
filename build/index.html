@@ -1,320 +1,340 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Airtame-test</title>
+		<title>Softfacade-test</title>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<link rel='shortcut icon' type='image/x-icon' href='https://airtame.com/assets/favicon.ico' />
+		<link rel="shortcut icon" type="image/png" href="./img/favicon.png" />
 		<link rel="stylesheet" media="all" href="css/style.css" />
 	</head>
 	<body>
+		<header class="header">
+	<nav class="header__row header__row--nav" data-nav>
 		<div class="container">
-			<header class="header">
-	<div class="header__wrapper">
-		<div class="header__column header__column--links">
-			<a class="logo" href="https://airtame.com/">
-				<img class="logo__img logo__img--mobile" src="../img/logo-mobile.svg" alt="Logo mobile">
-				<img class="logo__img logo__img--desktop" src="../img/logo-desktop.svg" alt="Logo desktop">
-			</a>
-			<button type="button" role="button" aria-label="Toggle Navigation" class="lines-button x" data-toggle-menu>
-				<span class="lines"></span>
-			</button>
-			<nav class="header__menu" data-menu>
-				<ul class="header__links">
-					<li class="header__link">
-						<a href="#">Product</a>
-					</li>
-					<li class="header__link">
-						<a href="#">Business</a>
-					</li>
-					<li class="header__link">
-						<a href="#">Education</a>
-					</li>
-					<li class="header__link">
-						<a href="#">Pricing</a>
-					</li>
-					<li class="header__link">
-						<a href="#">Support</a>
-					</li>
-					<li class="header__link">
-						<a href="#">Blog</a>
-					</li>
-				</ul>
-				<div class="header__actions header__actions--mobile">
-					<a class="header__link header__link--actions" href="#">Book demo</a>
-					<a class="btn btn--primary" href="#">Buy now</a>
-				</div>
-			</nav>
+			<a class="btn btn--login header__login header__login--mobile" href="#">Войти</a>
+			<a class="header__location" href="#"><span>Омск</span></a>
+			<ul class="header__links">
+				<li class="header__link">
+					<a href="#">О компании</a>
+				</li>
+				<li class="header__link">
+					<a href="#">Акции</a>
+				</li>
+				<li class="header__link">
+					<a href="#">Магазины</a>
+				</li>
+				<li class="header__link">
+					<a href="#">Новости</a>
+				</li>
+				<li class="header__link">
+					<a href="#">Товары</a>
+				</li>
+				<li class="header__link">
+					<a href="#">Напишите нам</a>
+				</li>
+			</ul>
+			<a class="header__tel" href="tel:88005555505">8-800-555-55-05</a>
 		</div>
-		<div class="header__column header__column--actions">
-			<div class="header__actions header__actions--desktop">
-				<a class="header__link header__link--actions" href="#">Book demo</a>
-				<a class="btn btn--primary" href="#">Buy now</a>
+	</nav>
+	<div class="container header__wrapper">
+		<div class="header__row header__row--main">
+			<a class="header__logo logo" href="https://5ka.ru/">
+				<img class="logo__img" src="./img/logo.png" alt="Logo">
+			</a>
+			<ul class="header__links">
+				<li class="header__link">
+					<a href="#">Покупателям</a>
+				</li>
+				<li class="header__link">
+					<a href="#">Партнерам</a>
+				</li>
+				<li class="header__link">
+					<a href="#">Карьера</a>
+				</li>
+			</ul>
+			<div class="header__btns">
+				<a class="header__search" href="#"></a>
+				<input class="header__searchbar is-hidden" type="text">
+				<a class="btn btn--login header__login header__login--desktop" href="#">Войти</a>
+				<button type="button" role="button" aria-label="Toggle Navigation" class="lines-button x" data-toggle-menu>
+					<span class="lines"></span>
+				</button>
 			</div>
 		</div>
 	</div>
 </header>
 
-			<main class="main">
-				<section class="slider">
-	<h4 class="slider__title">Compare</h4>
-	<div class="slider__content slick">
-		<div class="slider__item" data-item="appletv">
-			<div class="slider__container">
-				<img class="slider__img" src="../img/img-appletv.png" alt="appletv">
-				<span class="slider__name">Apple TV</span>
+		<main class="main">
+			<section class="banners">
+	<div class="banners__content">
+		<div class="banners__slider">
+			<div class="banners__item is-active">
+				<div class="banners__wrapper">
+					<div class="banners__inner">
+						<div class="banners__title">
+							<span class="banners__period">c 30 июня по 6 июля 2015 года</span>
+							<h2 class="title">Окорочка куриные охлажденные</h2>
+							<span class="banners__amount">1 кг</span>
+						</div>
+						<img class="banners__img" src="./img/img-chicken.png" alt="chicken">
+						<div class="banners__label">
+							<span class="banners__price">129 <sup>00</sup></span>
+							<span class="banners__price banners__price--canceled">189 <sup>50</sup></span>
+							<span class="banners__discount">-20%</span>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="banners__share socials">
+						<a class="socials__item socials__item--vk" href="#">v kontakte</a>
+						<a class="socials__item socials__item--ok" href="#">odnoklassniki</a>
+						<a class="socials__item socials__item--email" href="#">email</a>
+					</div>
+				</div>
 			</div>
-
-		</div>
-		<div class="slider__item" data-item="chromecast">
-			<div class="slider__container">
-				<img class="slider__img" src="../img/img-chromecast.png" alt="chromecast">
-				<span class="slider__name">Chromecast</span>
+			<div class="banners__item is-active">
+				<div class="banners__wrapper">
+					<div class="banners__inner">
+						<div class="banners__title">
+							<span class="banners__period">c 30 июня по 6 июля 2015 года</span>
+							<h2 class="title">Окорочка куриные охлажденные</h2>
+							<span class="banners__amount">1 кг</span>
+						</div>
+						<img class="banners__img" src="./img/img-chicken.png" alt="chicken">
+						<div class="banners__label">
+							<span class="banners__price">129 <sup>00</sup></span>
+							<span class="banners__price banners__price--canceled">189 <sup>50</sup></span>
+							<span class="banners__discount">-20%</span>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="banners__share socials">
+						<a class="socials__item socials__item--vk" href="#">v kontakte</a>
+						<a class="socials__item socials__item--ok" href="#">odnoklassniki</a>
+						<a class="socials__item socials__item--email" href="#">email</a>
+					</div>
+				</div>
 			</div>
-
-		</div>
-		<div class="slider__item" data-item="miracast">
-			<div class="slider__container">
-				<img class="slider__img" src="../img/img-miracast.png" alt="miracast">
-				<span class="slider__name">Miracast</span>
-			</div>
-
-		</div>
-		<div class="slider__item" data-item="wepresent">
-			<div class="slider__container">
-				<img class="slider__img" src="../img/img-wepresent.png" alt="wepresent">
-				<span class="slider__name">wePresent</span>
-			</div>
-
-		</div>
-		<div class="slider__item" data-item="creston">
-			<div class="slider__container">
-				<img class="slider__img" src="../img/img-creston.png" alt="creston">
-				<span class="slider__name">Creston</span>
-			</div>
-
-		</div>
-		<div class="slider__item" data-item="actiontech">
-			<div class="slider__container">
-				<img class="slider__img" src="../img/img-actiontech.png" alt="actiontech">
-				<span class="slider__name">Action Tech</span>
-			</div>
-
-		</div>
-		<div class="slider__item" data-item="mersive">
-			<div class="slider__container">
-				<img class="slider__img" src="../img/img-mersive.png" alt="mersive">
-				<span class="slider__name">Mersive</span>
-			</div>
-
-		</div>
-		<div class="slider__item" data-item="cables">
-			<div class="slider__container">
-				<img class="slider__img" src="../img/img-cables.png" alt="cables">
-				<span class="slider__name">Cables</span>
-			</div>
-
-		</div>
-		<div class="slider__item" data-item="airserver">
-			<div class="slider__container">
-				<img class="slider__img" src="../img/img-airserver.png" alt="airserver">
-				<span class="slider__name">Airserver</span>
-			</div>
-
-		</div>
-		<div class="slider__item" data-item="i3sync">
-			<div class="slider__container">
-				<img class="slider__img" src="../img/img-i3sync.png" alt="i3sync">
-				<span class="slider__name">I3sync</span>
-			</div>
-
-		</div>
-		<div class="slider__item" data-item="intelunit">
-			<div class="slider__container">
-				<img class="slider__img" src="../img/img-intel-unite.png" alt="intel unit">
-				<span class="slider__name">Intel unite</span>
-			</div>
-
-		</div>
-		<div class="slider__item" data-item="airparrot">
-			<div class="slider__container">
-				<img class="slider__img" src="../img/img-airparrot.png" alt="airparrot">
-				<span class="slider__name">Airparrot</span>
-			</div>
-
-		</div>
-		<div class="slider__item" data-item="microsoft">
-			<div class="slider__container">
-				<img class="slider__img" src="../img/img-microsoft.png" alt="microsoft">
-				<span class="slider__name">Microsoft</span>
-			</div>
-
-		</div>
-	</div>
-	<!-- <div class="slider__arrows">
-
-	</div> -->
-</section>
-
-				<section class="comparison">
-	<div class="comparison__tabs tabs">
-		<div class="tabs__menu">
-			<a class="tabs__link is-active" href="#"><h2 class="comparison__title title" data-item-title="appletv">Apple TV</h2></a>
-			<a class="tabs__link" href="#"><h2 class="comparison__title title" data-item-title="airtame">Airtame</h2></a>
-		</div>
-		<div class="tab">
-			<h2 class="title comparison__title comparison__title--desktop" data-item-title="appletv">Apple TV</h2>
-			<span class="comparison__subscription">Ideas for your home entertainment</span>
-			<img class="comparison__img" src="../img/img-appletv.png" alt="appletv" data-item-img="appletv">
-			<div class="comparison__option">
-				<h3 class="subtitle">Pick Apple TV if</h3>
-				<p>If you only own Apple devices and want to easily watch movies and entertainment at home, you should conside the Apple TV.</p>
-			</div>
-			<div class="comparison__option">
-				<h3 class="subtitle">Apple TV for home</h3>
-				<p>Apple TV is made for watching TV shows and sharing personal media at home.</p>
-			</div>
-			<div class="comparison__option">
-				<h3 class="subtitle">Apple-centric</h3>
-				<p>Work only with Mac and iOS.</p>
-			</div>
-			<div class="comparison__brands">
-				<span class="comparison__brand comparison__brand--apple"></span>
-			</div>
-		</div>
-		<div class="tab is-hidden">
-			<h2 class="comparison__title comparison__title--desktop title" data-item-title="airtame">Airtame</h2>
-			<span class="comparison__subscription">Ideas for business and schools work</span>
-			<img class="comparison__img" src="../img/img-airtame.png" alt="airtame" data-item-img="airtame">
-			<div class="comparison__option">
-				<h3 class="subtitle">Pick Airtame if</h3>
-				<p>If you want a device agnostic option for your school or business that lets you stream wirelessly, Airtame is the Apple TV alternative for your needs.</p>
-			</div>
-			<div class="comparison__option">
-				<h3 class="subtitle">Airtame for school and work</h3>
-				<p>Airtame is that Airtame is intended for cllaborative work at schools and offices</p>
-			</div>
-			<div class="comparison__option">
-				<h3 class="subtitle">Device agnostic</h3>
-				<p>Work on multiple platforms.</p>
-			</div>
-			<div class="comparison__brands">
-				<span class="comparison__brand comparison__brand--apple"></span>
-				<span class="comparison__brand comparison__brand--win"></span>
-				<span class="comparison__brand comparison__brand--android"></span>
+			<div class="banners__item is-active">
+				<div class="banners__wrapper">
+					<div class="banners__inner">
+						<div class="banners__title">
+							<span class="banners__period">c 30 июня по 6 июля 2015 года</span>
+							<h2 class="title">Окорочка куриные охлажденные</h2>
+							<span class="banners__amount">1 кг</span>
+						</div>
+						<img class="banners__img" src="./img/img-chicken.png" alt="chicken">
+						<div class="banners__label">
+							<span class="banners__price">129 <sup>00</sup></span>
+							<span class="banners__price banners__price--canceled">189 <sup>50</sup></span>
+							<span class="banners__discount">-20%</span>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="banners__share socials">
+						<a class="socials__item socials__item--vk" href="#">v kontakte</a>
+						<a class="socials__item socials__item--ok" href="#">odnoklassniki</a>
+						<a class="socials__item socials__item--email" href="#">email</a>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
 </section>
 
-				<section class="info">
-	<h2 class="info__title title">Information</h2>
-	<div class="info__option">
-		<h3 class="subtitle">Device agnostic</h3>
-		<div class="info__descr">
-			<p>
-				For the most part, Apple TV favors Apple products. For example, the AirPlay function lets you mirror the screen of your Macbook
-				or iOS device to an Apple TV. Apple has chosen to restrict this AirPlay function to work only with Apple devices. This limits
-				the use of the Apple TV in BYOD environments where a range of different operating systems are in use. There do exist some
-				third party software, such as
-				<a href="https://airtame.com/airparrot-alternative">AirParrot</a> that allow non-Apple devices, such as a Windows PC, to mirror to an Apple TV using AirPlay. However, you have
-				to purchase licenses for this software on each computer, which can add up.
-			</p>
+			<section class="receipts">
+	<div class="container">
+		<div class="receipts__title">
+			<span>Наши рецепты</span>
+			<a href="#">340 рецептов</a>
 		</div>
-	</div>
-	<div class="info__option">
-		<h3 class="subtitle">Apple TV vs. Airtame crossplatform support</h3>
-		<div class="info__descr">
-			<p>
-				Airtame is device agnostic, meaning it does not favor any single platform so it’s BYOD friendly. Using only software and
-				your computer’s existing WiFi connection, Airtame mirrors the screen of your laptop and lets you present from your mobile
-				device. Airtame works with Mac, Windows, and Linux computers to show all your apps and presentations wirelessly. Android
-				users can stream presentations, PDFs, Office documents and images with the Airtame mobile app available for both Android
-				and iOS. After Airtame 3.1, you can also use AirPlay
-				<a href="https://airtame.com/blog/airplay-ios-mirroring-in-public-beta/">iOS mirroring</a> to mirror your iPads and iPhones to an Airtame-enabled screen. As stated in
-				<a href="https://help.airtame.com/general#product-roadmap">Airtame's product roadmap</a>
-				</a>, Airtame also plans to develop Android mirroring in the future.
-			</p>
+		<div class="receipts__slider">
+			<a class="receipts__item is-active" href="#">
+				<div class="receipts__img">
+					<img src="./img/img-receipt-1.png" alt="receipt 1">
+				</div>
+				<span class="receipts__price">160<sup>00</sup></span>
+				<div class="receipts__descr receipts__descr--rec1">
+					вегетарианский, простой
+				</div>
+				<h3 class="receipts__name">Блинчики с клубникой</h3>
+				<div class="receipts__time">
+					<span class="time"></span>0:40
+				</div>
+				<div class="receipts__action" href="#">Подобрать продукты</div>
+			</a>
+			<a class="receipts__item" href="#">
+				<div class="receipts__img">
+					<img src="./img/img-receipt-2.png" alt="receipt 2">
+				</div>
+				<span class="receipts__price">190<sup>00</sup></span>
+				<div class="receipts__descr receipts__descr--rec2">
+					сытный, сложный
+				</div>
+				<h3 class="receipts__name">Говяжий стейк с песто и кукурузой</h3>
+				<div class="receipts__time">
+					<span class="time"></span>0:40
+				</div>
+				<div class="receipts__action" href="#">Подобрать продукты</div>
+			</a>
+			<a class="receipts__item" href="#">
+				<div class="receipts__img">
+					<img src="./img/img-receipt-3.png" alt="receipt 3">
+				</div>
+				<span class="receipts__price">230<sup>00</sup></span>
+				<div class="receipts__descr receipts__descr--rec3">
+					завтрак, простой
+				</div>
+				<h3 class="receipts__name">Вафли с медом</h3>
+				<div class="receipts__time">
+					<span class="time"></span>0:40
+				</div>
+				<div class="receipts__action" href="#">Подобрать продукты</div>
+			</a>
 		</div>
-	</div>
-	<div class="info__option">
-		<h3 class="subtitle">Apps vs. Dashboards</h3>
-		<div class="info__descr">
-			<p>
-				Apple TV focuses heavily on apps that aim to replace traditional TV and movies. When you turn the Apple TV on, you will see
-				Apple’s classic wall of app icons. From the apps, Apple TV can access your media subscriptions and play your favorite shows
-				and movies on your TV. This makes it clear that the Apple TV is made for watching shows and other personal entertainment
-				at home.
-			</p>
-		</div>
-	</div>
-	<div class="info__option">
-		<h3 class="subtitle">Apple TV Apps vs. Airtame dashboard on TV</h3>
-		<div class="info__descr">
-			<p>
-				With Airtame’s customizable
-				<a href="https://airtame.com/blog/introducing-homescreen-a-step-into-the-future/">Homescreen</a>, you can display an image, website, or dashboard on a TV without the need for additional hardware. Homescreen
-				also allows for an easy and intuitive overview of all your Airtame devices. This gives the Airtame Homescreen a practical
-				use. It is a digital signage solution that’s useful for a range of different needs. For example, you can show upcoming events,
-				a meeting room calendar, or important data that you and your team need to track.
-			</p>
-		</div>
-	</div>
-	<div class="info__option">
-		<h3 class="subtitle">Home network vs. Corporate network</h3>
-		<div class="info__descr">
-			<p>
-				Apple TV and Airtame both support WPA2 Enterprise networks. Apple TV, however, doesn’t work with networks that have multicast
-				or <a href="http://www.dial-multiscreen.org/">DIAL</a> disabled for performance and security reasons. That’s because having these disabled means that streaming devices
-				are not able to broadcast themselves on the network, letting other devices find them.
-			</p>
-			<p>
-				Airtame, however, works around this issue by letting you connect your computer screen to your TV by typing in the Airtame
-				device’s IP address, which is always shown on the TV screen. Note that to use AirPlay iOS mirroring with Airtame, however,
-				you will need Multicast enabled.
-			</p>
-		</div>
-	</div>
-	<div class="info__option">
-		<h3 class="subtitle">Apple TV in education</h3>
-		<div class="info__descr">
-			<p>
-				After talking with hundreds of district leaders and IT administrators, we’ve learned of a trend to use Apple TV in education,
-				which could be due to the widespread familiarity with Apple’s brand, as well as Apple TV’s relatively low price. However,
-				we’ve also seen that problems start to arise when students and teachers use a mix of devices, like Windows or Android, in
-				their classrooms.
-			</p>
-			<p>
-				We’ve researched what classrooms and meeting rooms need and designed Airtame with these features in mind. That’s why Airtame
-				supports a wide range of platforms, like you’d find in a BYOD environment. Airtame is also optimized to work with enterprise
-				grade networks that are set up for high security and performance, like Eduroam. And unlike Apple TV, Airtame offers Airtame
-				Cloud, a free cloud-based tool for monitoring and managing multiple devices remotely. With <a href="https://help.airtame.com/install-and-setup/deployment-guide/airtame-cloud">Airtame Cloud</a>, you can change
-				device settings in batches, as well as update and reboot multiple devices at once.
-			</p>
-		</div>
-	</div>
-	<div class="info__option">
-		<h3 class="subtitle">Bottom line</h3>
-		<div class="info__descr">
-			<p>
-				Airtame and Apple TV are two different technologies for different uses.
-			</p>
-			<p>
-				If you want to conveniently stream movies and other entertainment media and you own Apple products, the safe choice is Apple
-				TV. If you’re looking for an Apple TV alternative for professional work, Airtame is the wireless solution designed for your
-				classrooms and offices. It has professional features, such as cloud-based remote device management, easy integration with
-				secure corporate networks, and a Homescreen that doubles as light digital signage to name a few.
-			</p>
-		</div>
-		<p>
-
-		</p>
 	</div>
 </section>
 
-			</main>
+			<section class="brands">
+	<div class="container">
+		<div class="brands__slider">
+			<div class="brands__item brands__item--j7 is-active"></div>
+			<div class="brands__item brands__item--lipton"></div>
+			<div class="brands__item brands__item--fanta"></div>
+			<div class="brands__item brands__item--j7"></div>
+			<div class="brands__item brands__item--nestea"></div>
+			<a href="#" class="brands__item brands__item--more"><span>+456</span></a>
 		</div>
+	</div>
+</section>
+
+			<section class="map">
+	<div class="map__title">
+		<a href="#" class="map__text">
+			5 100 <span>магазинов</span>
+		</a>
+	</div>
+</section>
+
+			<section class="loyality">
+	<div class="container">
+		<div class="loyality__column loyality__column--descr">
+			<h3 class="title">Платите меньшe</h3>
+			<p>Станьте частью программы лояльности: получите карту Пятерочки в любом магазине сети и покупайте дешевле.</p>
+			<a class="loyality__btn loyality__btn--desktop btn" href="#">Зарегистрировать карту</a>
+		</div>
+		<div class="loyality__column loyality__column--card">
+			<div class="loyality__card">
+				<img src="../img/logo-colored.png" alt="Logo colored">
+			</div>
+			<a href="#" class="loyality__descript">
+				<h3>Новые должности во всех магазинах</h3>
+				<p>Во всех магазинах «Пятёрочка» введена должность «Директор по свежести». В его обязанности входит постоянный контроль
+					срока продуктов, выставленных на полки в торговом зале. Каждый специалист проходит специальную подготовку и аттестуется
+					в московском офисе.
+				</p>
+				<span>13 июня в 11:40</span>
+			</a>
+			<a class="loyality__btn loyality__btn--mobile btn" href="#">Зарегистрировать карту</a>
+		</div>
+	</div>
+</section>
+
+		</main>
+		<footer class="footer">
+	<div class="container">
+		<div class="footer__item">
+			<div class="footer__title">Покупателям</div>
+			<ul class="footer__links">
+				<li class="footer__link">
+					<a href="#">О Компании</a>
+				</li>
+				<li class="footer__link">
+					<a href="#">Акции</a>
+				</li>
+				<li class="footer__link">
+					<a href="#">Магазины</a>
+				</li>
+				<li class="footer__link">
+					<a href="#">Новости</a>
+				</li>
+				<li class="footer__link">
+					<a href="#">Товары</a>
+				</li>
+				<li class="footer__link">
+					<a href="#">Рецепты</a>
+				</li>
+			</ul>
+		</div>
+		<div class="footer__item">
+			<div class="footer__title">Партнерам</div>
+			<ul class="footer__links">
+				<li class="footer__link">
+					<a href="#">Поставщики</a>
+				</li>
+				<li class="footer__link">
+					<a href="#">Строительство и эксплуатация</a>
+				</li>
+				<li class="footer__link">
+					<a href="#">Аутстаффинг</a>
+				</li>
+				<li class="footer__link">
+					<a href="#">Франчайзинг</a>
+				</li>
+				<li class="footer__link">
+					<a href="#">Субаренда</a>
+				</li>
+			</ul>
+		</div>
+		<div class="footer__item">
+			<div class="footer__title">Карьера</div>
+			<ul class="footer__links">
+				<li class="footer__link">
+					<a href="#">Работа для студентов</a>
+				</li>
+				<li class="footer__link">
+					<a href="#">Истории успеха</a>
+				</li>
+				<li class="footer__link">
+					<a href="#">Работа в магазине</a>
+				</li>
+				<li class="footer__link">
+					<a href="#">Работа в офисе</a>
+				</li>
+				<li class="footer__link">
+					<a href="#">Мероприятия</a>
+				</li>
+				<li class="footer__link">
+					<a href="#">HR обучение</a>
+				</li>
+				<li class="footer__link">
+					<a href="#">Работа в логистике</a>
+				</li>
+			</ul>
+		</div>
+		<div class="footer__item">
+			<div class="footer__title">Обратная связь</div>
+			<ul class="footer__links">
+				<li class="footer__link">
+					<a href="#">Напишите нам</a>
+				</li>
+				<li class="footer__link">
+					<a href="#">Закажите звонок</a>
+				</li>
+			</ul>
+		</div>
+		<div class="footer__contacts">
+			<img src="../img/logo-mono.svg" alt="Logo">
+			<p>
+				Головной офис:<br> Адрес: 109029, Москва, Средняя Калитниковская ул., д. 28, стр. 4. Телефон: (495) 662-88-88
+			</p>
+		</div>
+	</div>
+</footer>
+
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script type="text/javascript" src="js/slick.min.js"></script>
 		<script src="js/main.js"></script>

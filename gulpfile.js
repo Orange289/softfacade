@@ -6,8 +6,8 @@ var gulp = require('gulp'),
 	plumber = require('gulp-plumber'),
 	fileinclude = require('gulp-file-include'),
 	del = require('del'),
-	sass = require('gulp-sass'),
-	sassGlob = require('gulp-sass-glob'),
+	less = require('gulp-less'),
+	lessGlob = require('gulp-less-glob'),
 	cssimport = require('gulp-cssimport'),
 	rename = require('gulp-rename'),
 	rigger = require('gulp-rigger'),
@@ -31,8 +31,8 @@ var paths = {
 	},
 	src: {
 		js: 'src/scripts/*.js',
-		sass: 'src/styles/**/*.scss',
-		sassEntry: 'src/styles/base.scss',
+		less: 'src/styles/**/*.less',
+		lessEntry: 'src/styles/base.less',
 		html: 'src/templates/*.html',
 		img: 'src/assets/img/*.{png,svg,jpg,gif,ico}',
 		fonts: 'src/assets/fonts/**/*.{woff,woff2}'
@@ -40,8 +40,8 @@ var paths = {
 	watch: {
 		html: 'src/templates/',
 		js: 'src/scripts/**/*.js',
-		sass: 'src/styles/**/*.scss',
-		sassEntry: 'src/styles/base.scss',
+		less: 'src/styles/**/*.less',
+		lessEntry: 'src/styles/base.less',
 		html: 'src/templates/',
 		img: 'src/assets/img/*.{png,svg,jpg,gif,ico}',
 		fonts: 'src/assets/fonts/**/*.{woff,woff2}'
@@ -81,10 +81,10 @@ gulp.task('js:build', function () {
 });
 
 gulp.task('style:build', function () {
-    gulp.src(paths.src.sassEntry)
+    gulp.src(paths.src.lessEntry)
 				.pipe(plumber())
-				.pipe(sassGlob())
-        .pipe(sass())
+				.pipe(lessGlob())
+        .pipe(less())
 				.pipe(cssimport({extensions: ['css']}))
 		.pipe(prefixer())
 				.pipe(cssmin())
@@ -126,10 +126,10 @@ gulp.task('watch', function(){
     watch([paths.watch.html], function(event, cb) {
         gulp.start('html:build');
     });
-    watch([paths.watch.sass], function(event, cb) {
+    watch([paths.watch.less], function(event, cb) {
         gulp.start('style:build');
     });
-	watch([paths.watch.sassEntry], function(event, cb) {
+	watch([paths.watch.lessEntry], function(event, cb) {
 			gulp.start('style:build');
 	});
     watch([paths.watch.js], function(event, cb) {

@@ -1,0 +1,139 @@
+.socials__item {
+	display: inline-block;
+	font-size: 0;
+	.size(70px);
+	border: 2px solid @dark-beige-color;
+	border-radius: 100%;
+	margin-right: 28px;
+	position: relative;
+	transition: all ease .4s;
+
+	&:before {
+		content: '';
+		position: absolute;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-color: transparent;
+	}
+
+	@media (max-width: 600px) {
+		.size(40px);
+		margin-right: 10px;
+	}
+
+	@media (min-width: @screen-md-min) {
+		.size(40px);
+	}
+
+	@media (min-width: @screen-lg-min) {
+		margin-right: 20px;
+	}
+}
+
+.socials__item--vk {
+
+	&:before {
+		.size(32px, 19px);
+		left: 17px;
+		top: 25px;
+		background-image: url('../img/icon-vk.svg');
+	}
+
+	&:hover {
+		border-color: @vk-hover-color;
+		background-color: @vk-hover-color;
+
+		&:before {
+			background-image: url('../img/icon-vk-hover.svg');
+		}
+	}
+
+	@media (min-width: @screen-md-min) {
+		&:before {
+			.size(22px, 13px);
+			left: 7px;
+			top: 13px;
+		}
+	}
+
+	@media (max-width: 600px) {
+		&:before {
+			.size(22px, 13px);
+			left: 7px;
+			top: 13px;
+		}
+	}
+}
+
+
+.socials__item--ok {
+
+	&:before {
+		.size(21px, 36px);
+		background-image: url('../img/icon-ok.svg');
+		top: 14px;
+		left: 22px;
+	}
+
+	&:hover {
+		border-color: @ok-hover-color;
+		background-color: @ok-hover-color;
+
+		&:before {
+			background-image: url('../img/icon-ok-hover.svg');
+		}
+	}
+
+	@media (min-width: @screen-md-min) {
+		&:before {
+			.size(12px, 20px);
+			top: 8px;
+			left: 12px;
+		}
+	}
+
+	@media (max-width: 600px) {
+		&:before {
+			.size(12px, 20px);
+			top: 8px;
+			left: 12px;
+		}
+	}
+}
+
+
+.socials__item--email {
+
+	&:before {
+		.size(35px, 34px);
+		background-image: url('../img/icon-email.svg');
+		top: 16px;
+		left: 14px;
+	}
+
+	&:hover {
+		border-color: @email-hover-color;
+		background-color: @email-hover-color;
+
+		&:before {
+			background-image: url('../img/icon-email-hover.svg');
+		}
+	}
+
+	@media (min-width: @screen-md-min) {
+		&:before {
+			.size(20px, 19px);
+			top: 8px;
+			left: 8px;
+		}
+	}
+
+	@media (max-width: 600px) {
+ 		&:before {
+			.size(20px, 19px);
+			top: 8px;
+			left: 8px;
+		}
+	}
+}
+

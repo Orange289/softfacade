@@ -1,0 +1,32 @@
+.btn {
+	font-size: 28px;
+	color: @btn-text-color;
+	font-weight: 600;
+	text-align: center;
+	white-space: nowrap;
+	display: inline-block;
+	background-image: none;
+	border-radius: @btn-border-radius;
+	padding: 22px 40px;
+	transition: all 0.3s ease;
+	background: @btn-bg-color;
+	border: 2px solid @btn-border-color;
+
+	&:hover {
+		color: @red-color;
+		background: #fff;
+	}
+
+	@media (min-width: @screen-sm-min) {
+		font-size: @font-size-base;
+		padding: 18px 32px;
+	}
+}
+
+.btn--login {
+	padding: 20px 30px;
+
+	@media (min-width: @screen-md-min) {
+		padding: 8px 16px;
+	}
+}

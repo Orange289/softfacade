@@ -1,0 +1,159 @@
+.banners {
+
+	.title {
+		width: 440px;
+	}
+
+	@media (max-width: 600px) {
+		.title {
+			font-size: calc(@font-size-title - 15px);
+			width: auto;
+		}
+	}
+
+	@media (min-width: @screen-md-min) {
+		.title {
+			width: 366px;
+			margin-top: 75px;
+			margin-bottom: 85px;
+		}
+	}
+}
+
+.banners__inner {
+	position: relative;
+
+	@media (min-width: @screen-lg-min) {
+		max-width: 1240px;
+		margin: auto;
+	}
+}
+
+.banners__title {
+
+	@media (min-width: @screen-md-min) {
+		display: inline-block;
+		vertical-align: top;
+		margin-right: 20px;
+	}
+
+	@media (min-width: @screen-lg-min) {
+		margin-right: 194px;
+	}
+}
+
+.banners__wrapper {
+	background: @beige-color;
+	padding: 48px 32px 40px;
+	position: relative;
+
+	@media (min-width: @screen-md-min) {
+		padding: 60px 32px 56px;
+	}
+}
+
+.banners__item {
+	position: relative;
+	padding-bottom: 87px;
+
+	@media (min-width: @screen-md-min) {
+		padding-bottom: 77px;
+	}
+}
+
+.banners__period {
+	font-size: calc(@font-size-subtitle + 2px);
+	display: block;
+
+	@media (min-width: @screen-md-min) {
+		font-size: @font-size-subtitle;
+	}
+}
+
+.banners__amount {
+	display: block;
+	padding-top: 12px;
+}
+
+.banners__label {
+	position: absolute;
+	right: 0px;
+	bottom: -95px;
+	.size(200px);
+	background-image: url('../img/img-price-circle.png');
+
+	@media (min-width: @screen-md-min) {
+		bottom: -105px;
+	}
+}
+
+img.banners__img {
+	display: block;
+	margin: auto;
+	margin-top: -20px;
+
+	@media (min-width: @screen-md-min) {
+		display: inline-block;
+		vertical-align: top;
+	}
+}
+
+.banners__price {
+	font-size: 52px;
+	color: #fff;
+	font-weight: 500;
+	display: block;
+	margin-top: 54px;
+	margin-left: 30px;
+
+	sup {
+		font-size: 30px;
+		font-weight: 600;
+		margin-left: -10px;
+		margin-top: -4px;
+	}
+}
+
+.banners__price--canceled {
+	font-size: 30px;
+	color: #0e7b2f;
+	margin-top: 0;
+	position: relative;
+	display: block;
+
+	sup {
+		font-size: 20px;
+		margin-left: -5px;
+	}
+
+	&:before {
+		content: '';
+		position: absolute;
+		bottom: 20px;
+		left: 0;
+		transform: rotate(-20deg);
+		.size(80px, 3px);
+		background-color: #fff;
+		z-index: 2;
+	}
+}
+
+.banners__discount {
+	font-size: 30px;
+	font-weight: 500;
+	color: #fff;
+	display: block;
+	margin-left: 100px;
+	margin-top: -6px;
+}
+
+.banners__share {
+	padding-top: 8px;
+	position: relative;
+	z-index: 2;
+
+	@media (max-width: 600px) {
+		padding-top: 65px;
+		text-align: center;
+	}
+}

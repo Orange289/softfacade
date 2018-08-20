@@ -1,0 +1,30 @@
+.clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+.size(@width, @height: @width) {
+  width: @width;
+  height: @height;
+}
+
+.font-setup(@f, @l, @u1, @u2, @w) {
+	@font-face {
+		font-family: @f;
+		src:
+			local(@l),
+			url(@u1) format('woff'),
+			url(@u2) format('woff2');
+		font-weight: @w;
+	}
+}
+
+.font-param(@s, @l, @w, @c: #000000) {
+  font-size: @s;
+  line-height: @l;
+  font-weight: @w;
+  color: @c;
+}

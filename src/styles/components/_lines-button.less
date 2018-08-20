@@ -1,0 +1,89 @@
+.lines-button {
+	display: inline-block;
+	vertical-align: top;
+	cursor: pointer;
+	user-select: none;
+	background-color: transparent;
+	border: 0;
+	transition: 0.3s;
+	margin-top: 16px;
+	padding: 0;
+
+	@media (min-width: @screen-md-min) {
+		display: none;
+	}
+
+	&:hover {
+		opacity: 1;
+	}
+
+	&:active {
+		outline: 0;
+		box-shadow: none;
+		transition: 0;
+	}
+
+	&:focus {
+		outline: 0;
+	}
+}
+
+/*common to all three-liners */
+
+.lines {
+	&,
+	&:before,
+	&:after {
+		display: inline-block;
+		width: 42px;
+		height: 4px;
+		background: @header-text-color;
+		border-radius: 2px;
+		transition: 0.3s;
+	}
+}
+.lines {
+  position: relative;
+
+
+
+	&:before,
+	&:after {
+		position: absolute;
+		left: 0;
+		content: '';
+		transform-origin: calc(30px / 14) center;
+
+	}
+
+	&:before {
+		top: -13px;
+	}
+
+	&:after {
+		top: 13px;
+	}
+}
+
+.lines-button.is-active {
+  transform: scale3d(0.8, 0.8, 0.8);
+
+	.lines {
+		background: transparent;
+
+		&:before,
+		&:after {
+		top: 0;
+		width: 42px;
+		transform-origin: 50% 50%;
+		}
+
+		&:before {
+		transform: rotate3d(0, 0, 1, 45deg);
+		}
+
+		&:after {
+		transform: rotate3d(0, 0, 1, -45deg);
+		}
+	}
+}

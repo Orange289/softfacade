@@ -1,0 +1,155 @@
+.loyality {
+	color: #fff;
+	padding: 38px 0 60px;
+	background: @link-color;
+
+	.title {
+		margin-bottom: 20px;
+	}
+
+	p {
+		font-size: 28px;
+		font-weight: 500;
+		line-height: 32px;
+		margin: 0;
+		margin-bottom: 25px;
+	}
+
+	@media (min-width: @screen-md-min) {
+
+		.container {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.title {
+			margin-bottom: 10px;
+		}
+
+		p {
+			font-size: 18px;
+			line-height: 25px;
+			margin-bottom: 50px;
+		}
+	}
+}
+
+.loyality__column--descr {
+
+	@media (min-width: @screen-md-min) {
+		padding-left: 28px;
+		width: 57%;
+	}
+
+	@media (min-width: @screen-lg-min) {
+		padding-left: 0;
+	}
+}
+
+.loyality__column--card {
+	position: relative;
+
+	@media (min-width: @screen-md-min) {
+		display: flex;
+		justify-content: flex-end;
+		padding-right: 20px;
+		width: 43%;
+		padding-top: 40px;
+	}
+
+	@media (min-width: @screen-lg-min) {
+		padding-right: 130px;
+	}
+}
+
+.loyality__btn {
+	width: 100%;
+
+	&--desktop {
+		display: none;
+	}
+
+	@media (min-width: @screen-md-min) {
+
+		&--desktop {
+			display: block;
+			width: 290px;
+		}
+
+		&--mobile {
+			display: none;
+		}
+	}
+}
+
+.loyality__card {
+	padding: 32px 25px;
+	background: #fff;
+	.size(100%, 320px);
+	border-radius: 20px;
+	box-shadow: 1px 1px 4px 0 rgba(0,0,0,0.11);
+	margin-bottom: 30px;
+	cursor: pointer;
+	position: relative;
+
+	@media (min-width: @screen-md-min) {
+		.size(337px, 199px);
+		margin-bottom: 0;
+	}
+}
+
+.loyality__descript {
+	display: none;
+	color: #fff;
+	padding: 40px 20px 14px;
+	background: @dark-green-color;
+	border-radius: 10px;
+	box-shadow: 1px 1px 4px 0 rgba(0,0,0,0.11);
+	width: 70%;
+	position: absolute;
+	top: -10px;
+	right: 0;
+
+	h3 {
+		font-size: 24px;
+		line-height: 25px;
+		font-weight: 600;
+		margin: 0;
+		margin-bottom: 20px;
+	}
+
+	p {
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 25px;
+		margin-bottom: 25px;
+	}
+
+	span {
+		opacity: 0.5;
+	}
+
+	@media (min-width: @screen-md-min) {
+		width: 380px;
+		right: auto;
+		left: -70px;
+		top: -200px;
+	}
+
+	@media (min-width: @screen-lg-min) {
+		top: -250px;
+		left: 40%;
+	}
+
+	&.is-active {
+		display: block;
+	}
+}
+
+.loyality__overlay {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	.size(100%);
+}

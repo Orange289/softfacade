@@ -1,0 +1,124 @@
+.brands {
+	padding: 98px 0;
+
+	@media (max-width: 600px) {
+		padding: 68px 0;
+	}
+}
+
+.brands__item {
+	.size(auto, 112px);
+	background-size: contain;
+	background-repeat: no-repeat;
+
+	@media (max-width: 600px) {
+		height: 90px;
+	}
+
+	@media (min-width: @screen-md-min) {
+		height: 100px;
+	}
+}
+
+.brands__item--j7 {
+	background-image: url('../img/img-j7.png');
+
+	@media (min-width: @screen-md-min) {
+		width: 126px;
+	}
+
+	@media (min-width: @screen-md-min) {
+		.size(114px, 93px);
+	}
+}
+
+.brands__item--lipton {
+	background-image: url('../img/img-lipton.png');
+
+	@media (min-width: @screen-md-min) {
+		width: 100px;
+	}
+
+	@media (min-width: @screen-md-min) {
+		.size(106px);
+	}
+}
+
+.brands__item--fanta {
+	background-image: url('../img/img-fanta.png');
+
+	@media (min-width: @screen-md-min) {
+		width: 116px;
+	}
+
+	@media (min-width: @screen-md-min) {
+		.size(151px, 97px);
+	}
+}
+
+.brands__item--nestea {
+	background-image: url('../img/img-nestea.png');
+
+	@media (min-width: @screen-md-min) {
+		width: 116px;
+	}
+
+	@media (min-width: @screen-md-min) {
+		.size(132px, 95px);
+	}
+}
+
+.brands__item--more {
+	text-align: center;
+
+
+	span {
+		font-size: 38px;
+		line-height: 110px;
+		color: #fff;
+		font-weight: 600;
+		position: relative;
+		display: inline-block;
+		width: 112px;
+	}
+
+	@media (max-width: 600px) {
+		display: none !important;
+	}
+
+	@media (min-width: @screen-md-min) {
+		.size(100px);
+
+		span {
+			font-size: 27px;
+			line-height: 104px;
+			.size(100px);
+		}
+	}
+}
+
+.brands__item--more span:before {
+	content: '';
+	display: block;
+	.size(100%, 112px);
+	background: @link-color;
+	border-radius: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+
+	@media (min-width: @screen-md-min) {
+		.size(100%, 100px);
+	}
+}
+
+.brands__slider {
+
+	@media (min-width: @screen-md-min) {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+

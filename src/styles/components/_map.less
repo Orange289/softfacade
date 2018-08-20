@@ -1,0 +1,68 @@
+.map {
+	background: @dark-green-color;
+	padding: 65px 0 78px;
+	text-align: center;
+	background-image: url('../img/bg-map.png');
+	background-repeat: no-repeat;
+	background-position-x: -380px;
+
+	@media (min-width: @screen-md-min) {
+		padding: 59px 0 79px;
+		background-position-x: -195px;
+	}
+
+	@media (min-width: @screen-lg-min) {
+		padding: 59px 0 85px;
+		background-position-x: 0;
+	}
+}
+
+.map__text {
+	font-family: 'DIN Alternate', sans-serif;
+	font-size: 123px;
+	font-weight: bold;
+	color: #fff;
+	text-align: left;
+	margin: auto;
+	display: inline-block;
+	position: relative;
+	padding-left: 127px;
+
+
+	span {
+		font-family: @font-fam, sans-serif;
+		font-size: 24px;
+		font-weight: 500;
+		display: block;
+		margin-top: -10px;
+	}
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 12px;
+		left: 0;
+		background-image: url('../img/icon-pin.png');
+		background-size: cover;
+		background-repeat: no-repeat;
+		.size(96px, 128px);
+	}
+
+	@media (max-width: 600px) {
+		font-size: 80px;
+
+		&:before {
+			.size(73px, 98px);
+
+		}
+	}
+
+	@media (min-width: @screen-md-min) {
+		padding-left: 123px;
+
+		span {
+			color: #bdcf01;
+		}
+	}
+
+}

@@ -1,0 +1,37 @@
+.time {
+	display: inline-block;
+	vertical-align: top;
+	.size(22px);
+	border: 1px solid @gray-color;
+	border-radius: 100%;
+	position: relative;
+	margin-right: 5px;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: -1px;
+		left: 0;
+		bottom: 0;
+		right: 1px;
+		margin: auto;
+		.size(4px, 6px);
+		border-bottom: 1px solid @gray-color;
+		border-right: 1px solid @gray-color;
+	}
+
+	@media (min-width: @screen-md-min) {
+		.size(12px);
+
+		&:before {
+			border-right: none;
+			border-left: 1px solid @gray-color;
+			.size(2px, 4px);
+			right: 0;
+		}
+	}
+
+	@media (min-width: @screen-lg-min) {
+		.size(15px);
+	}
+}

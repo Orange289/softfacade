@@ -1,4 +1,4 @@
-var MY_SETTINGS = {
+var PAGE_SETTINGS = {
 	css: {
 		activeClass: 'is-active',
 		hiddenClass: 'is-hidden',
@@ -8,70 +8,106 @@ var MY_SETTINGS = {
 
 $(function () {
 	var $header = $('header');
-
-	$('main').css('display', 'block');
+	var $searchBtn = $('.header__search');
+	var $searchBar = $('.header__searchbar');
 
 	// Menu toggle
 
 	$('[data-toggle-menu]').click(function () {
-		$(this).toggleClass(MY_SETTINGS.css.activeClass);
-		$('[data-menu]').slideToggle();
-		$header.toggleClass(MY_SETTINGS.css.openedClass);
+		$(this).toggleClass(PAGE_SETTINGS.css.activeClass);
+		$('[data-nav]').slideToggle();
+		$header.toggleClass(PAGE_SETTINGS.css.openedClass);
+	});
+
+	// Show and hide search
+
+	$searchBtn.click(function (e) {
+		e.preventDefault();
+
+		$(this).addClass(PAGE_SETTINGS.css.hiddenClass);
+		$searchBar.removeClass(PAGE_SETTINGS.css.hiddenClass);
+		$searchBar.focus();
+	});
+
+	$(document).mouseup(function (e) {
+		if (!$searchBar.is(e.target)) {
+			$searchBar.addClass(PAGE_SETTINGS.css.hiddenClass);
+			$searchBtn.removeClass(PAGE_SETTINGS.css.hiddenClass);
+		}
 	});
 
 	// Slick slider options
 
-	$('.slick').slick({
+	$('.banners__slider').slick({
+		arrows: false,
+		dots: true,
+		speed: 200
+	});
+
+
+	$('.receipts__slider').slick({
+		arrows: false,
 		dots: false,
-		infinite: true,
-		speed: 300,
-		slidesToShow: 7,
-		slidesToScroll: 7,
+		speed: 200,
 		responsive: [
 			{
-				breakpoint: 1200,
-				settings: {
-					slidesToShow: 4,
-					slidesToScroll: 4
-				}
+				breakpoint: 2000,
+				settings: 'unslick'
 			},
+
 			{
-				breakpoint: 1024,
-				settings: {
-					slidesToShow: 2,
-					slidesToScroll: 2
-				}
-			},
-			{
-				breakpoint: 480,
+				breakpoint: 991,
 				settings: {
 					slidesToShow: 1,
 					slidesToScroll: 1
 				}
+
 			}
 		]
 	});
 
-	// Tabs
+	$('.brands__slider').slick({
+		arrows: false,
+		dots: false,
+		speed: 200,
+		responsive: [
+			{
+				breakpoint: 2000,
+				settings: 'unslick'
+			},
 
-	$('.tabs__link').click(function (e) {
-		e.preventDefault();
-		var $link = $(this);
-		var tabIndex = $link.index();
-		var $tab = $link
-			.parents('.tabs')
-			.find('.tab')
-			.eq(tabIndex);
-		$link
-			.addClass(MY_SETTINGS.css.activeClass)
-			.siblings()
-			.removeClass(MY_SETTINGS.css.activeClass);
-		$tab
-			.removeClass(MY_SETTINGS.css.hiddenClass)
-			.siblings('.tab')
-			.addClass(MY_SETTINGS.css.hiddenClass);
+			{
+				breakpoint: 991,
+				settings: {
+					autoplay: true,
+					autoplaySpeed: 2500,
+					slidesToShow: 3,
+					slidesToScroll: 1
+				}
+
+			}
+		]
 	});
 
+	// Show and hide the loyalityy description
 
+	$('.loyality__card').on('click', function() {
+		$('.loyality__descript')
+			.addClass(PAGE_SETTINGS.css.activeClass);
+		setTimeout(function() {
+			$('.loyality__descript').removeClass(PAGE_SETTINGS.css.activeClass)
+		}, 3000);
+	});
+
+	// Footer accordion
+
+	$('.footer__title').on('click', function () {
+		var $title = $(this);
+		$title.toggleClass('footer__title--active');
+		$title
+			.parents('.footer__item')
+			.find('.footer__links')
+			.slideToggle();
+	});
 
 })
